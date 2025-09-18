@@ -23,6 +23,7 @@ export const addMsgToConversation = async (participants, msg) => {
 // Get messages for a conversation identified by participants
 const getMsgsForConversation = async (req, res) => {
     try {
+        console.log("req.query", req.query);
         const { sender, receiver } = req.query;
         console.log(sender + receiver);
         const participants = [sender, receiver];
